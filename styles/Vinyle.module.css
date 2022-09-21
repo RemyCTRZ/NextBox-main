@@ -1,0 +1,40 @@
+.vinyle {
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(45deg);
+}
+
+.vinyle_cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+    background-color: pink;
+    z-index: 1;
+    -webkit-animation: Vinyle_turn__8M3_p 5s linear infinite;
+    animation: Vinyle_turn__8M3_p 5s linear infinite;
+}
+
+.img_vinyle {
+    position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: medium none;
+    margin: auto;
+    display: block;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
