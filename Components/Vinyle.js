@@ -5,7 +5,7 @@ import Styles from '../styles/Vinyle.module.css'
 export default function Vinyle({ props }) {
   return (
     <>
-      <div>
+      <div className={Styles.div}>
         <div className={Styles.test}>
           <div className={Styles.vinyle}>
             <Image src="/assets/Images/vinyle.png" alt="vinyle" width={200} height={200}></Image>

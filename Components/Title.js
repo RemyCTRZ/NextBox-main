@@ -6,8 +6,8 @@ export default function Title(props) {
 
   return (
     <>
-      <h1>Welcome <span className={styles.name}>{props.name}</span> to the Next_Box</h1>
-      <p>Coucou les amis, aujourd&apos;hui on apprend REACT avec NextJs</p>
+      <h1 className={styles.h1}>Welcome <span className={styles.name}>{props.name}</span> to the Next_Box</h1>
+      <p className={styles.p}>Coucou les amis, aujourd&apos;hui on apprend REACT avec NextJs</p>
     </>
   );
 }

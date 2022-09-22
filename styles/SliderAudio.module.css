@@ -1,12 +1,11 @@
-
-
 .swiper {
-  width: 100%;
+  width: 30rem;
   height: 100%;
+  margin-inline: auto;
 }
 
 .swiperSlide {
-height:35vh ;
+  height: 35vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -30,26 +29,27 @@ height:35vh ;
   background-size: cover;
   width: 100%;
   height: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .title {
   z-index: 99;
-  background-color: rgba(132, 103, 118, 0.75);
-  border-radius: 15px;
-  color:rgb(11, 215, 241);
-}
-
-.audioBar{
+  backdrop-filter: blur(5px);
+  color: #0093E9;
   width: 100%;
-  margin-top: 25px;
-  
+  padding: .5rem 1rem;
+  cursor: pointer;
+  text-shadow: 0 0 10px #fff;
+  transition: transform .3s ease-in-out;
 }
 
-.pTitle {
- text-align: right;
- margin-right: 25px ;
+.title:hover {
+  transform: scale(1.1);
 }
 
+.audioBar {
+  width: 30rem;
+}
 
 .test {
   pointer-events: none;

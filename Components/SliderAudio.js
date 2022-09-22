@@ -23,12 +23,12 @@ export default function App() {
 
   useEffect(() => {
     fetchAllMusics();
-    
   }, []);
 
 
   const [allMusic, SetAllMusic] = useState([]);
   const [oneMusic, SetOneMusic] = useState({});
+  const [Play, setPlay] = useState(false);
 
   const selectMusic = (e) => {
     const index = Number(e.currentTarget.dataset.id);
@@ -41,23 +41,25 @@ export default function App() {
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className={Styles.swiper}
-        slidesPerView={2}
+        slidesPerView={1}
         loop={true}
       >
         {allMusic.map((item, index) => (
           <SwiperSlide key={index} className={Styles.swiperSlide}>
             <Image className={Styles.img} src={item.img} alt={item.title} layout="fill" />
             <div className={Styles.title}>
-              <h2 className={Styles.h3} data-id={index}  onClick={selectMusic }>
-                {item.title}
+              <h2 className={Styles.h3} data-id={index} onClick={selectMusic}>
+                {Play ? "Now playing : " + item.title : item.title}
               </h2>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <AudioPlayer props={oneMusic}  />
-      <Vinyle props={oneMusic}/>
+      <AudioPlayer props={oneMusic} setPlay={setPlay} />
+      {Play ?
+        <Vinyle props={oneMusic} /> : ""
+      }
     </>
   );
 }

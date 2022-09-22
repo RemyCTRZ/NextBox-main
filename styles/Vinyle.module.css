@@ -1,3 +1,11 @@
+.div {
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+}
+
 .vinyle {
     position: relative;
     max-width: 300px;
@@ -5,7 +13,13 @@
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
-    transform: rotate(45deg);
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
 }
 
 .vinyle_cover {
